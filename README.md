@@ -20,15 +20,6 @@ Small workspace for the exercise **“Engpassbehebung im Übertragungsnetz”** 
 - `runpp` is **AC**; the analytical Ü8.1/8.2 **Wirk-DC** angles will be **very close** but not bit-identical. For a DC check in pandapower, you can also run a DC power flow (`rundcpp`) and compare to the lecture formulas.
 
 
-## GitHub
-
-From this folder, after [installing `gh`](https://cli.github.com/) and logging in once (`gh auth login`):
-
-```bash
-gh repo create powerflow-evs2-a8 --private --source=. --remote=origin --push
-```
-
-Change the name if needed, or add `--public`. Without `gh`: create an empty repo on GitHub, then `git remote add origin …` and `git push -u origin main`.
 
 ## License
 
