@@ -31,6 +31,27 @@ Use Python **3.10+**; tested with the versions pinned implicitly by the requirem
 - `runpp` is **AC**; the analytical Ü8.1/8.2 **Wirk-DC** angles will be **very close** but not bit-identical. For a DC check in pandapower, you can also run a DC power flow (`rundcpp`) and compare to the lecture formulas.
 - The thermal line limit in the model uses **550 A** through `max_i_ka=0.55` on the lines; verify against your report convention.
 
+## Push to GitHub
+
+This folder is a git repository on `main` with an initial commit. The [GitHub CLI](https://cli.github.com/) (`gh`) can create the remote and push after a one-time login:
+
+```bash
+cd /path/to/Powerflow
+gh auth login
+gh repo create powerflow-evs2-a8 --private --source=. --remote=origin --push
+```
+
+Pick another name if the repo already exists, or add `--public` for a public repository.
+
+**Without `gh`:** create an **empty** repository (no README) on [github.com/new](https://github.com/new), then:
+
+```bash
+git remote add origin git@github.com:YOUR_USER/powerflow-evs2-a8.git
+git push -u origin main
+```
+
+Use HTTPS and a [personal access token](https://docs.github.com/en/authentication) if you do not use SSH.
+
 ## License
 
 Private / coursework. Do not use course materials in violation of your university’s rules. Task provided by IAEW RWTH Aachen
